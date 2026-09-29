@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pharma-commercial-analytics"
+version = "1.0.0"
+description = "HCP segmentation and sales-force effectiveness for pharmaceutical commercial teams"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["error::DeprecationWarning:src.*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

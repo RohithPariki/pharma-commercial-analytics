@@ -1,0 +1,42 @@
+{
+  "current_calls_per_month": 3011.9,
+  "current_monthly_call_cost": 557204.58,
+  "current_promo_driven_trx_per_month": 2127.1,
+  "scenario_a_budget_neutral": {
+    "calls_per_month": 3012.0,
+    "call_budget_change_pct": 0.0,
+    "monthly_call_cost": 557220.0,
+    "promo_driven_trx_per_month": 2461.4,
+    "incremental_trx_per_month": 334.3,
+    "promo_trx_uplift_pct": 0.1572,
+    "incremental_trx_pct_of_total_trx": 0.0077,
+    "incremental_gross_margin_per_month": 360353.6,
+    "annualised_incremental_gross_margin": 4324243.24,
+    "annualised_call_cost_saving": -185.0
+  },
+  "scenario_b_profit_max": {
+    "calls_per_month": 2861.0,
+    "call_budget_change_pct": -0.0501,
+    "monthly_call_cost": 529285.0,
+    "promo_driven_trx_per_month": 2394.9,
+    "incremental_trx_per_month": 267.8,
+    "promo_trx_uplift_pct": 0.1259,
+    "incremental_trx_pct_of_total_trx": 0.0061,
+    "incremental_gross_margin_per_month": 333567.14,
+    "annualised_incremental_gross_margin": 4002805.64,
+    "annualised_call_cost_saving": 335035.0
+  },
+  "hcps_increase": 1006,
+  "hcps_reduce": 243,
+  "hcps_deprioritised": 2420,
+  "hcps_digital_only": 382,
+  "hcp_brand_pairs": 4609,
+  "waste_diagnostics": {
+    "pct_calls_below_breakeven_roi": 0.5506,
+    "monthly_spend_below_breakeven": 306822.5,
+    "pct_calls_to_low_value_tier": 0.1209,
+    "pct_calls_to_no_see_hcps": 0.0051,
+    "median_marginal_roi_current_plan": 0.447
+  },
+  "channel_attribution_within_r2": 0.0124
+}

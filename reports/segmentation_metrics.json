@@ -1,0 +1,113 @@
+{
+  "metrics": {
+    "selected_k": 6,
+    "silhouette": 0.2051,
+    "davies_bouldin": 1.3157,
+    "calinski_harabasz": 638.7,
+    "n_hcps": 3000,
+    "n_features": 7,
+    "pca_variance_explained_2d": 0.539,
+    "high_tier_pct_of_hcps": 0.4467,
+    "high_tier_pct_of_trx": 0.7168,
+    "high_tier_pct_of_calls": 0.7873,
+    "stability_ari_mean": 0.9207,
+    "stability_ari_min": 0.7999,
+    "stability_runs": 12,
+    "validation": {
+      "priority_segments_by_observed_response": [
+        "High-Response Growth Targets",
+        "High-Value Loyalists"
+      ],
+      "high_responder_base_rate": 0.191,
+      "high_responder_rate_in_priority_segments": 0.3576,
+      "targeting_lift_vs_random": 1.872,
+      "mean_alpha_top_vs_bottom_segment": 1.614,
+      "segment_alpha_spread": 0.0642,
+      "rank_correlation_observed_vs_true_response": 0.886,
+      "segment_truth_profile": [
+        {
+          "segment_name": "High-Response Growth Targets",
+          "n": 323,
+          "observed_response": 0.217,
+          "mean_alpha": 0.159,
+          "pct_high_responder": 0.3839,
+          "cum_share_of_hcps": 0.1077
+        },
+        {
+          "segment_name": "High-Value Loyalists",
+          "n": 516,
+          "observed_response": 0.0582,
+          "mean_alpha": 0.1559,
+          "pct_high_responder": 0.3411,
+          "cum_share_of_hcps": 0.2797
+        },
+        {
+          "segment_name": "Untapped Potential",
+          "n": 824,
+          "observed_response": 0.0281,
+          "mean_alpha": 0.1073,
+          "pct_high_responder": 0.1335,
+          "cum_share_of_hcps": 0.5543
+        },
+        {
+          "segment_name": "Low-Yield / Deprioritise",
+          "n": 391,
+          "observed_response": 0.0263,
+          "mean_alpha": 0.1149,
+          "pct_high_responder": 0.1739,
+          "cum_share_of_hcps": 0.6847
+        },
+        {
+          "segment_name": "Emerging Adopters",
+          "n": 452,
+          "observed_response": 0.0074,
+          "mean_alpha": 0.0948,
+          "pct_high_responder": 0.0973,
+          "cum_share_of_hcps": 0.8353
+        },
+        {
+          "segment_name": "Steady Maintainers",
+          "n": 494,
+          "observed_response": -0.0512,
+          "mean_alpha": 0.0985,
+          "pct_high_responder": 0.1032,
+          "cum_share_of_hcps": 1.0
+        }
+      ]
+    }
+  },
+  "k_diagnostics": [
+    {
+      "k": 3,
+      "inertia": 13324.9,
+      "silhouette": 0.1945,
+      "davies_bouldin": 1.5246,
+      "calinski_harabasz": 751.2,
+      "composite_score": 0.2906
+    },
+    {
+      "k": 4,
+      "inertia": 11838.71,
+      "silhouette": 0.1984,
+      "davies_bouldin": 1.5651,
+      "calinski_harabasz": 688.8,
+      "composite_score": 0.2953
+    },
+    {
+      "k": 5,
+      "inertia": 10669.63,
+      "silhouette": 0.2027,
+      "davies_bouldin": 1.4494,
+      "calinski_harabasz": 655.1,
+      "composite_score": 0.5392
+    },
+    {
+      "k": 6,
+      "inertia": 9680.1,
+      "silhouette": 0.2051,
+      "davies_bouldin": 1.3157,
+      "calinski_harabasz": 638.7,
+      "composite_score": 0.75
+    }
+  ]
+}

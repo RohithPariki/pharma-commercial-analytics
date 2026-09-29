@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------
+# Pharma Commercial Analytics - single source of truth for the pipeline.
+# Every module reads this file; nothing is hard-coded in the analysis layer.
+# ---------------------------------------------------------------------------
+
+seed: 42
+
+simulation:
+  n_hcps: 3000
+  n_territories: 40
+  n_regions: 6
+  n_reps: 40
+  months: 24
+  start_month: "2024-07"
+
+products:
+  - product_id: P001
+    brand: Cardiovex
+    therapy_area: Cardiovascular
+    lifecycle: mature          # mature | growth | launch
+    net_revenue_per_trx: 385.0
+    launch_month_index: 0
+  - product_id: P002
+    brand: Neurolyn
+    therapy_area: Neurology
+    lifecycle: growth
+    net_revenue_per_trx: 1120.0
+    launch_month_index: 0
+
+specialties:
+  Cardiologist:      {weight: 0.20, base_volume: 46, ta: [Cardiovascular]}
+  Neurologist:       {weight: 0.16, base_volume: 38, ta: [Neurology]}
+  Internal Medicine: {weight: 0.26, base_volume: 30, ta: [Cardiovascular, Neurology]}
+  General Practice:  {weight: 0.28, base_volume: 22, ta: [Cardiovascular, Neurology]}
+  Endocrinologist:   {weight: 0.10, base_volume: 26, ta: [Cardiovascular]}
+
+# Latent promotional responsiveness classes (ground truth, hidden from models).
+responsiveness:
+  High:     {share: 0.18, alpha: 0.26, beta: 0.55}
+  Moderate: {share: 0.34, alpha: 0.14, beta: 0.45}
+  Low:      {share: 0.33, alpha: 0.06, beta: 0.40}
+  Non:      {share: 0.15, alpha: 0.01, beta: 0.30}
+
+economics:
+  cost_per_call: 185.0            # fully loaded field-force cost of one detail
+  cost_per_speaker_program: 4200.0
+  cost_per_email: 1.6
+  calls_per_rep_per_month: 92     # field capacity constraint
+  gross_margin: 0.72
+
+features:
+  analysis_window_months: 12      # trailing window for the HCP base table
+  recent_window_months: 3
+
+segmentation:
+  k_range: [3, 4, 5, 6]      # actionable range for a field call plan
+  n_init: 25
+  max_iter: 500
+  pca_variance: 0.90        # de-correlate before K-Means; 0 disables
+  stability_runs: 12        # bootstrap re-fits for the ARI stability check
+  stability_subsample: 0.8
+  features:                 # value / potential / momentum / response / engagement
+    - trx_12m
+    - market_share
+    - unrealized_opportunity
+    - trx_growth_pct
+    - promo_response_index
+    - promo_contrast
+    - call_frequency
+
+targeting:
+  target_share_ceiling: 0.62      # realistic max attainable brand share
+  min_calls_floor: 0              # allow full deprioritisation
+  max_calls_per_hcp_per_month: 4  # compliance / diminishing-returns cap
+
+risk_model:
+  decline_threshold: -0.20        # >20% TRx drop next quarter = decline event
+  test_size: 0.25
+  cv_folds: 5
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  reports: reports
+  figures: reports/figures
+  powerbi: powerbi/data

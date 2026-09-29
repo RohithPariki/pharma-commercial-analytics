@@ -1,0 +1,14 @@
+{
+  "n_territories": 40,
+  "national_quota_attainment": 1.017,
+  "territories_above_quota": 24,
+  "national_market_share": 0.3747,
+  "attainment_spread_p90_p10": 0.3522,
+  "gini_territory_potential": 0.0801,
+  "gini_territory_workload": 0.1227,
+  "potential_model_r2": 0.7092,
+  "rep_effect_vs_true_skill_corr": 0.565,
+  "top_quartile_trx_per_call": 16.719,
+  "bottom_quartile_trx_per_call": 13.118,
+  "productivity_gap_top_vs_bottom_quartile_pct": 0.2745
+}

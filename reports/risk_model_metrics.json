@@ -1,0 +1,78 @@
+{
+  "n_training_hcps": 2745,
+  "positive_class_rate": 0.1311,
+  "decline_threshold": -0.2,
+  "min_baseline_trx": 8,
+  "n_features": 19,
+  "best_model": "logistic_regression",
+  "models": {
+    "logistic_regression": {
+      "cv_roc_auc_mean": 0.8004,
+      "cv_roc_auc_std": 0.0142,
+      "holdout_roc_auc": 0.7827,
+      "holdout_pr_auc": 0.3479,
+      "holdout_f1": 0.4071,
+      "brier_score": 0.1765,
+      "top_decile_precision": 0.3676,
+      "top_decile_recall": 0.2778,
+      "top_decile_lift_vs_base_rate": 2.806
+    },
+    "gradient_boosting": {
+      "cv_roc_auc_mean": 0.7851,
+      "cv_roc_auc_std": 0.0214,
+      "holdout_roc_auc": 0.7547,
+      "holdout_pr_auc": 0.3116,
+      "holdout_f1": 0.2137,
+      "brier_score": 0.1101,
+      "top_decile_precision": 0.3676,
+      "top_decile_recall": 0.2778,
+      "top_decile_lift_vs_base_rate": 2.806
+    }
+  },
+  "top_drivers": [
+    {
+      "feature": "trx_growth_pct",
+      "coefficient": 0.832,
+      "abs_effect": 0.832
+    },
+    {
+      "feature": "adoption_slope",
+      "coefficient": 0.4633,
+      "abs_effect": 0.4633
+    },
+    {
+      "feature": "trx_12m",
+      "coefficient": -0.3632,
+      "abs_effect": 0.3632
+    },
+    {
+      "feature": "decile",
+      "coefficient": -0.3433,
+      "abs_effect": 0.3433
+    },
+    {
+      "feature": "market_trx_12m",
+      "coefficient": 0.3423,
+      "abs_effect": 0.3423
+    },
+    {
+      "feature": "nrx_ratio",
+      "coefficient": -0.337,
+      "abs_effect": 0.337
+    },
+    {
+      "feature": "n_brands_prescribed",
+      "coefficient": -0.2971,
+      "abs_effect": 0.2971
+    },
+    {
+      "feature": "yoy_growth_pct",
+      "coefficient": 0.26,
+      "abs_effect": 0.26
+    }
+  ],
+  "expected_revenue_loss_next_quarter": 5740580.23,
+  "top_decile_revenue_at_risk_12m": 2871590.85,
+  "top_decile_hcps": 300,
+  "high_risk_hcps": 393
+}

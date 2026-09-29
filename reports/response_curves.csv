@@ -1,0 +1,7 @@
+segment_name,s0,a,b,r2,n_obs,n_call_levels,max_supported_calls,calls_to_80pct_response,identified
+High-Response Growth Targets,0.36,0.41159,0.2,0.9998,12408,3,2,8.05,False
+High-Value Loyalists,0.51538,0.05998,0.79631,0.9852,18840,5,4,2.02,True
+Untapped Potential,0.29214,0.03252,0.69009,0.994,30216,5,4,2.33,True
+Low-Yield / Deprioritise,0.2326,0.02528,1.15876,1.0,14088,3,2,1.39,True
+Emerging Adopters,0.19525,0.00834,1.22697,0.9838,16296,4,3,1.31,True
+Steady Maintainers,0.44478,0.0,0.2,-0.0,18768,3,2,8.05,False

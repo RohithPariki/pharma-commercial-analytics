@@ -1,0 +1,4 @@
+channel,share_lift_per_unit,std_error,t_stat,incremental_trx_per_unit_per_month,gross_margin_per_unit,unit_cost,roi
+Field detailing (per call),0.031826,0.0009,35.35,0.8057,415.45,185.0,2.25
+Digital (per opened email),0.003037,0.000571,5.32,0.0769,39.64,5.333333333333334,7.43
+Speaker programme,0.040716,0.005576,7.3,1.0307,531.5,4200.0,0.13

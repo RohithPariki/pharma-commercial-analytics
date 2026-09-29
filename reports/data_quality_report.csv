@@ -1,0 +1,22 @@
+table,check,severity,status,observed,detail
+dim_hcp,primary_key_unique,CRITICAL,PASS,0 duplicates,key=['hcp_id']
+dim_territory,primary_key_unique,CRITICAL,PASS,0 duplicates,key=['territory_id']
+dim_product,primary_key_unique,CRITICAL,PASS,0 duplicates,key=['product_id']
+fact_rx,primary_key_unique,CRITICAL,PASS,0 duplicates,"key=['hcp_id', 'product_id', 'month']"
+fact_activity,primary_key_unique,CRITICAL,PASS,0 duplicates,"key=['hcp_id', 'product_id', 'month']"
+fact_sales,primary_key_unique,CRITICAL,PASS,0 duplicates,"key=['territory_id', 'product_id', 'month']"
+fact_rx,fk_hcp_id,CRITICAL,PASS,0 orphans,
+dim_hcp,fk_territory_id,CRITICAL,PASS,0 orphans,
+fact_rx,fk_product_id,CRITICAL,PASS,0 orphans,
+dim_hcp,no_null_values,WARNING,PASS,0 nulls,
+fact_rx,no_null_values,WARNING,PASS,0 nulls,
+fact_activity,no_null_values,WARNING,PASS,0 nulls,
+fact_sales,no_null_values,WARNING,PASS,0 nulls,
+fact_rx,non_negative_measures,CRITICAL,PASS,0 rows,
+fact_rx,trx_lte_market_trx,CRITICAL,PASS,0 rows,brand TRx cannot exceed category TRx
+fact_rx,nrx_lte_trx,CRITICAL,PASS,0 rows,
+fact_activity,opens_lte_sends,CRITICAL,PASS,0 rows,
+fact_rx,calendar_complete,CRITICAL,PASS,0 missing months,
+fact_rx,balanced_panel,WARNING,PASS,0 ragged series,every HCP-product must span the full window
+fact_activity,activity_rx_grain_match,CRITICAL,PASS,0 unmatched rows,
+fact_sales,positive_quota,WARNING,PASS,0 rows,
