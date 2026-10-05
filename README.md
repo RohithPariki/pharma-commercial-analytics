@@ -61,11 +61,4 @@ Execute the full pipeline from data generation to reporting with a single comman
 make all
 ```
 
----
 
-## 👤 Ownership & License
-
-- **Full Ownership & Author:** [Rohith Pariki](https://github.com/RohithPariki)
-- **LinkedIn:** [Rohith Pariki](https://www.linkedin.com/in/rohithpariki)
-- **Email:** [rohithpariki@gmail.com](mailto:rohithpariki@gmail.com)
-- **License:** Distributed under the MIT License. See [LICENSE](LICENSE) for details.
